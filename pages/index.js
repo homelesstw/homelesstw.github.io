@@ -502,7 +502,7 @@ export default function Home() {
 
           {/* 最終資訊 */}
 
-          <footer className="flex flex-col items-center bg-white p-6 pb-3 md:p-6 my-3">
+          <footer className="flex flex-col items-center bg-white p-6 pb-3 md:p-6">
             <div className=" max-w-screen-sm p-6 my-3">
               <h3 className="my-3 bg-white font-bold text-3xl leading-normal">
                 回首，是為了定錨下一個 10 年
