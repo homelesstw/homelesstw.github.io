@@ -19,7 +19,7 @@ const bgs = [bgImg01, bgImg02, bgImg03, bgImg04, bgImg05, bgImg06, bgImg07];
 const DotDiv = styled.div({
   mask: (props) =>
     props.url ? `url(${props.url}) no-repeat center center` : "",
-  maskSize: "contain"
+  maskSize: "contain",
 });
 
 export default function Home() {
@@ -29,8 +29,8 @@ export default function Home() {
         trigger: node,
         start: "top 1px",
         end: "bottom 100%",
-        scrub: true
-      }
+        scrub: true,
+      },
     });
 
     // timeline: background
@@ -43,7 +43,7 @@ export default function Home() {
         `#bg-${index}`,
         {
           autoAlpha: 1,
-          duration: 0.1
+          duration: 0.1,
         },
         index - 0.5
       );
@@ -53,7 +53,7 @@ export default function Home() {
           `#bg-${index}`,
           {
             autoAlpha: 0,
-            duration: 0.1
+            duration: 0.1,
           },
           index + 0.5
         );
@@ -70,7 +70,7 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC&display=swap"
           rel="stylesheet"
         />
-        <title>Create Next App</title>
+        <title>無家十年</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -108,10 +108,10 @@ export default function Home() {
         <main className="relative z-40 inset-0 w-full min-h-screen">
           {/* 首段封面 */}
 
-          <section className="section grid grid-cols-3 px-8">
-            <div className="col-span-2"></div>
-            <div className="flex flex-col min-h-screen">
-              <div className="flex-grow  flex flex-col items-end justify-center">
+          <section className="section grid grid-cols-3 px-3 md:px-8">
+            <div className="hidden md:block md:col-span-2"></div>
+            <div className="col-span-3 md:col-span-1 flex flex-col min-h-screen">
+              <div className="flex-grow flex flex-col items-start md:items-end justify-start md:justify-center">
                 <p className="my-3 bg-white font-bold  px-6 py-4 text-6xl">
                   無家十年
                 </p>
@@ -128,7 +128,7 @@ export default function Home() {
           </section>
 
           {/* 導言 */}
-          <section className="section flex flex-colpx-8 items-center justify-center ">
+          <section className="section flex flex-col px-3 md:px-8 items-center justify-center ">
             <div className=" max-w-screen-sm bg-white px-6 py-4 my-3">
               <p className="my-3 leading-normal">
                 2011 年，是臺灣無家服務領域風起雲湧的開端。10
@@ -143,9 +143,9 @@ export default function Home() {
 
           {/* 第一篇 */}
 
-          <section className="section p-8 flex flex-col">
+          <section className="section p-3 md:p-8 flex flex-col">
             <div className="w-100 grid grid-cols-3 flex-grow">
-              <div className="flex flex-col">
+              <div className="col-span-3 lg:col-span-1 flex flex-col">
                 <div className="flex flex-col items-start justify-center">
                   <p className="bg-white my-2 px-4 py-3 text-lg">
                     無家十年 2011-2014
@@ -158,12 +158,12 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-              <div className="col-span-2"></div>
+              <div className="hidden md:block col-span-2"></div>
             </div>
 
             <div className="w-100 grid grid-cols-3 ">
-              <div className="col-span-2" />
-              <div className="flex flex-col  items-end justify-center">
+              <div className="hidden md:block col-span-2"></div>
+              <div className="col-span-3 md:col-span-1 flex flex-col items-end justify-center">
                 <div className="h-auto my-4 p-8 bg-white ">
                   <p className="font-bold text-lg text-right">
                     如果城市是所有人的城市
@@ -181,10 +181,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-100 grid grid-cols-2 ">
+            <div className="w-100 grid grid-cols-1 lg:grid-cols-2 ">
               <div />
               <div className="flex flex-col items-end justify-center">
-                <p className="h-auto my-4 p-6 text-2xl bg-white text-right font-serif leading-relaxed">
+                <p className="h-auto my-4 p-6 text-lg md:text-2xl bg-white text-right font-serif leading-relaxed">
                   「大家都想把人趕走，卻沒人回答得出他們能去哪？」
                   <br />
                   「如果街頭已經飽和，收容中心為什麼總是住不滿？」
@@ -198,15 +198,15 @@ export default function Home() {
 
           {/* 第二篇 */}
 
-          <section className="section p-8 flex flex-col">
+          <section className="section p-3 md:p-8 flex flex-col">
             <div className="w-100 grid grid-cols-3 flex-grow ">
-              <div className="col-span-2" />
-              <div className="flex flex-col">
+              <div className="hidden md:block col-span-2"></div>
+              <div className="col-span-3 lg:col-span-1 flex flex-col">
                 <div className="flex flex-col items-end justify-center">
                   <p className="bg-white  my-2 px-4 py-3  text-lg">
                     無家十年 2015-2018
                   </p>
-                  <p className="font-bold h-16  my-2 px-4 py-3  text-2xl bg-white">
+                  <p className="font-bold h-16 my-2 px-4 py-3  text-2xl bg-white">
                     街頭的瘋人，與想像中的遊民
                   </p>
                   <button className="my-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
@@ -217,7 +217,7 @@ export default function Home() {
             </div>
 
             <div className="w-100 grid grid-cols-3 ">
-              <div className="flex flex-col  items-end justify-center">
+              <div className="col-span-3 md:col-span-1 flex flex-col  items-end justify-center">
                 <div className="h-auto my-4 p-8 bg-white">
                   <p className="font-bold text-lg">
                     無家者的面貌開始轉變
@@ -238,11 +238,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-span-2" />
+              <div className="hidden md:block col-span-2"></div>
             </div>
-            <div className="w-100 grid grid-cols-2 ">
+            <div className="w-100 grid grid-cols-1 lg:grid-cols-2 ">
               <div className="flex flex-col items-start justify-center">
-                <p className="h-auto my-4 p-6 text-2xl bg-white font-serif leading-relaxed">
+                <p className="h-auto my-4 p-6 text-lg md:text-2xl bg-white font-serif leading-relaxed">
                   「每年花 500、600 萬的醫療費在街友身上，值得嗎？」
                   <br />
                   「很多街友都想工作，但他們能做什麼？」
@@ -257,9 +257,9 @@ export default function Home() {
 
           {/* 第三篇 */}
 
-          <section className="section p-8 flex flex-col">
+          <section className="section p-3 md:p-8 flex flex-col">
             <div className="w-100 grid grid-cols-3 flex-grow">
-              <div className="flex flex-col">
+              <div className="col-span-3 lg:col-span-1 flex flex-col">
                 <div className="flex flex-col items-start justify-center">
                   <p className="bg-white  my-2 px-4 py-3  text-lg">
                     無家十年 2019-2021
@@ -272,10 +272,10 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-              <div className="col-span-2"></div>
+              <div className="hidden md:block col-span-2"></div>
             </div>
             <div className="w-100 grid grid-cols-12 items-end">
-              <div className="col-span-5 h-auto my-4 p-8 bg-white">
+              <div className="col-span-12 md:col-span-5 h-auto my-4 p-8 bg-white">
                 <p className="font-bold text-lg">
                   就算租到了房子
                   <br />
@@ -291,7 +291,7 @@ export default function Home() {
                 </div>
               </div>
               <div />
-              <div className="col-span-6 flex flex-col items-end justify-center">
+              <div className="col-span-12 md:col-span-6 flex flex-col items-end justify-center">
                 <p className="h-auto my-4 p-6 text-2xl bg-white  font-serif leading-relaxed">
                   「長期蝸居在違法爛房裡的人，是租客還是無家者？」
                   <br />
@@ -306,10 +306,10 @@ export default function Home() {
 
           {/* 第四篇 */}
 
-          <section className="section p-8 flex flex-col">
+          <section className="section p-3 md:p-8 flex flex-col">
             <div className="w-100 grid grid-cols-3   flex-grow">
-              <div className="col-span-2" />
-              <div className="flex flex-col">
+              <div className="hidden md:block col-span-2"></div>
+              <div className="col-span-3 lg:col-span-1 flex flex-col">
                 <div className="flex flex-col items-end justify-center">
                   <p className="bg-white  my-2 px-4 py-3  text-lg">
                     無家十年 2021-
@@ -324,7 +324,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-100 grid grid-cols-12 items-end">
-              <div className="col-span-6 flex flex-col items-start justify-center">
+              <div className="col-span-12 md:col-span-6 flex flex-col items-start justify-center">
                 <p className="h-auto my-4 p-6 text-2xl bg-white  font-serif leading-relaxed">
                   「其他社工無計可施的全轉到我手上，我又還能做什麼？」
                   <br />
@@ -335,7 +335,7 @@ export default function Home() {
                 </p>
               </div>
               <div />
-              <div className="col-span-5 h-auto my-4 p-8 bg-white">
+              <div className="col-span-12 md:col-span-5 h-auto my-4 p-8 bg-white">
                 <p className="font-bold text-lg">
                   社福單位不應該變成遊民製造機
                 </p>
@@ -355,11 +355,11 @@ export default function Home() {
 
           {/* 第五篇 */}
 
-          <section className="section p-8 flex flex-col">
+          <section className="section p-3 md:p-8 flex flex-col">
             <div className="w-100 grid grid-cols-3 flex-grow">
-              <div className="flex flex-col">
+              <div className="col-span-3 lg:col-span-1 flex flex-col">
                 <div className="flex flex-col items-start justify-center">
-                  <p className="bg-white  my-2 px-4 py-3  text-lg">
+                  <p className="bg-white my-2 px-4 py-3 text-lg">
                     無家十年－番外篇
                   </p>
                   <p className="font-bold bg-white  my-2 px-4 py-3  text-2xl ">
@@ -370,13 +370,13 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-              <div className="col-span-2"></div>
+              <div className="hidden md:block col-span-2"></div>
             </div>
 
             <div className="w-100 grid grid-cols-3 ">
-              <div className="col-span-2" />
-              <div className="flex flex-col  items-end justify-center">
-                <div className="h-auto my-4 p-8 bg-white">
+              <div className="hidden md:block col-span-2"></div>
+              <div className="col-span-3 md:col-span-1 flex flex-col items-end justify-center">
+                <div className="h-auto my-4 p-8 bg-white ">
                   <p className="font-bold text-lg text-right">
                     如果城市是所有人的城市
                     <br />
@@ -396,10 +396,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-100 grid grid-cols-2 ">
+            <div className="w-100 grid grid-cols-1 md:grid-cols-2 ">
               <div />
               <div className="flex flex-col items-end justify-center">
-                <p className="h-auto my-4 p-6 text-2xl bg-white text-right font-serif leading-relaxed">
+                <p className="h-auto my-4 p-6 text-lg md:text-2xl bg-white text-right font-serif leading-relaxed">
                   「精神障礙雖然常是人掉落街頭的原因，但也更可能是結果。」
                   <br />
                   「惡劣的生存環境和叢林法則，常以最快的速度毀人心智。」
@@ -413,7 +413,7 @@ export default function Home() {
 
           {/* 最終資訊 */}
 
-          <footer className="flex flex-col items-center bg-white p-6 my-3">
+          <footer className="flex flex-col items-center bg-white p-3 md:p-6 my-3">
             <div className=" max-w-screen-sm p-6 my-3">
               <h3 className="my-3 bg-white font-bold text-3xl leading-normal">
                 回首，是為了定錨下一個 10 年
