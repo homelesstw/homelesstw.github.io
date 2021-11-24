@@ -1,6 +1,6 @@
 import React from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Head from "next/head";
 import styled from "styled-components";
 import Image from "next/image";
@@ -16,11 +16,89 @@ gsap.registerPlugin(ScrollTrigger);
 
 const bgs = [bgImg01, bgImg02, bgImg03, bgImg04, bgImg05, bgImg06, bgImg07];
 
-const DotDiv = styled.div({
-  mask: (props) =>
-    props.url ? `url(${props.url}) no-repeat center center` : "",
-  maskSize: "contain"
-});
+const maskStyle = {
+  mask1: {
+    url: `/img/bg-mask-1.svg`,
+    xs: {
+      position: "center center",
+      size: "100%"
+    },
+    sm: {
+      position: "75% center",
+      size: "150vw"
+    }
+  },
+  mask3: {
+    url: `/img/bg-mask-3.svg`,
+    xs: {
+      position: "center center",
+      size: "100%"
+    },
+    sm: {
+      position: "65% 45%",
+      size: "160vw"
+    }
+  },
+  mask4: {
+    url: `/img/bg-mask-4.svg`,
+    xs: {
+      position: "center center",
+      size: "100%"
+    },
+    sm: {
+      position: "30% 55%",
+      size: "150vw"
+    }
+  },
+  mask5: {
+    url: `/img/bg-mask-5.svg`,
+    xs: {
+      position: "center center",
+      size: "100%"
+    },
+    sm: {
+      position: "50% 60%",
+      size: "140vw"
+    }
+  },
+  mask6: {
+    url: `/img/bg-mask-6.svg`,
+    xs: {
+      position: "center center",
+      size: "100%"
+    },
+    sm: {
+      position: "50% 55%",
+      size: "140vw"
+    }
+  },
+  mask7: {
+    url: `/img/bg-mask-7.svg`,
+    xs: {
+      position: "center center",
+      size: "100%"
+    },
+    sm: {
+      position: "50% 40%",
+      size: "160vw"
+    }
+  }
+};
+
+function getMaskValue(style, size) {
+  if (style && style[size]) {
+    const value = `url(${style.url}) ${style[size].position} / ${style[size].size} no-repeat`;
+    return value;
+  }
+  return "";
+}
+
+const DotDiv = styled.div`
+  mask: ${(props) => getMaskValue(maskStyle[props.maskId], "xs")};
+  @media (min-width: 768px) {
+    mask: ${(props) => getMaskValue(maskStyle[props.maskId], "sm")};
+  }
+`;
 
 export default function Home() {
   const rootRef = React.useCallback((node) => {
@@ -35,18 +113,29 @@ export default function Home() {
 
     // timeline: background
     bgs.forEach((el, index) => {
-      if (index !== 0) {
-        tl.set(`#bg-${index}`, { autoAlpha: 0 }, 0);
+      if (index === 0) {
+        tl.to(
+          `#bg-${index}`,
+          {
+            autoAlpha: 1,
+            duration: 0.1
+          },
+          index - 0.1
+        );
       }
 
-      tl.to(
-        `#bg-${index}`,
-        {
-          autoAlpha: 1,
-          duration: 0.1
-        },
-        index - 0.5
-      );
+      if (index !== 0) {
+        tl.set(`#bg-${index}`, { autoAlpha: 0 }, 0);
+
+        tl.to(
+          `#bg-${index}`,
+          {
+            autoAlpha: 1,
+            duration: 0.25
+          },
+          index - 0.9
+        );
+      }
 
       if (index !== bgs.length - 1) {
         tl.to(
@@ -55,7 +144,7 @@ export default function Home() {
             autoAlpha: 0,
             duration: 0.1
           },
-          index + 0.5
+          index + 0.9
         );
       }
     });
@@ -76,7 +165,7 @@ export default function Home() {
 
       <div
         ref={rootRef}
-        className="relative flex flex-col items-center justify-center min-h-screen py-2 bg-red-50"
+        className="relative flex flex-col items-center justify-center min-h-screen bg-red-50"
       >
         {/* 背景 */}
         <div className="bg-div z-0">
@@ -99,7 +188,7 @@ export default function Home() {
             <DotDiv
               key={`mask-${index}`}
               className="dot"
-              url={index !== 1 ? `/img/bg-mask-${index + 1}.svg` : ``}
+              maskId={`mask${index + 1}`}
             />
           ))}
         </div>
@@ -413,7 +502,7 @@ export default function Home() {
 
           {/* 最終資訊 */}
 
-          <footer className="flex flex-col items-center bg-white p-6 my-3">
+          <footer className="flex flex-col items-center bg-white p-6 pb-3">
             <div className=" max-w-screen-sm p-6 my-3">
               <h3 className="my-3 bg-white font-bold text-3xl leading-normal">
                 回首，是為了定錨下一個 10 年
@@ -452,9 +541,6 @@ export default function Home() {
             </div>
           </footer>
         </main>
-
-        {/* 網點 */}
-        {/* <main className="fixed z-10  inset-0 w-full min-h-screen test"></main> */}
       </div>
     </>
   );
