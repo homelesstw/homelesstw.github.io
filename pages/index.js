@@ -210,6 +210,7 @@ export default function Home() {
               maskId={`mask${index + 1}`}
             />
           ))}
+          <DotDiv className={`dot dot-end`} />
         </div>
 
         {/* 文字區 */}
