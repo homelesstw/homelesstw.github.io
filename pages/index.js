@@ -4,13 +4,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Head from "next/head";
 import styled from "styled-components";
 import Image from "next/image";
-import bgImg01 from "../public/img/bg-img-1.png";
-import bgImg02 from "../public/img/bg-img-2.png";
-import bgImg03 from "../public/img/bg-img-3.png";
-import bgImg04 from "../public/img/bg-img-4.png";
-import bgImg05 from "../public/img/bg-img-5.png";
-import bgImg06 from "../public/img/bg-img-6.png";
-import bgImg07 from "../public/img/bg-img-7.png";
+import bgImg01 from "../public/img/bg-img-1.jpg";
+import bgImg02 from "../public/img/bg-img-2.jpg";
+import bgImg03 from "../public/img/bg-img-3.jpg";
+import bgImg04 from "../public/img/bg-img-4.jpg";
+import bgImg05 from "../public/img/bg-img-5.jpg";
+import bgImg06 from "../public/img/bg-img-6.jpg";
+import bgImg07 from "../public/img/bg-img-7.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,84 +21,84 @@ const maskStyle = {
     url: `/img/bg-mask-1.svg`,
     xs: {
       position: "center center",
-      size: "100vh"
+      size: "100vh",
     },
     sm: {
       position: "75% center",
-      size: "150vw"
-    }
+      size: "150vw",
+    },
   },
   mask3: {
     url: `/img/bg-mask-3.svg`,
     xs: {
       position: "center center",
-      size: "100vh"
+      size: "100vh",
     },
     sm: {
       position: "65% 45%",
-      size: "160vw"
+      size: "160vw",
     },
     xl: {
       position: "75% 50%",
-      size: "140vw"
-    }
+      size: "140vw",
+    },
   },
   mask4: {
     url: `/img/bg-mask-4.svg`,
     xs: {
       position: "center center",
-      size: "100vh"
+      size: "100vh",
     },
     sm: {
       position: "30% 55%",
-      size: "150vw"
+      size: "150vw",
     },
     xl: {
       position: "25% 50%",
-      size: "130vw"
-    }
+      size: "130vw",
+    },
   },
   mask5: {
     url: `/img/bg-mask-5.svg`,
     xs: {
       position: "center center",
-      size: "100vh"
+      size: "100vh",
     },
     sm: {
       position: "50% 60%",
-      size: "140vw"
+      size: "140vw",
     },
     xl: {
       position: "50% 55%",
-      size: "130vw"
-    }
+      size: "130vw",
+    },
   },
   mask6: {
     url: `/img/bg-mask-6.svg`,
     xs: {
       position: "center center",
-      size: "100vh"
+      size: "100vh",
     },
     sm: {
       position: "50% 55%",
-      size: "140vw"
-    }
+      size: "140vw",
+    },
   },
   mask7: {
     url: `/img/bg-mask-7.svg`,
     xs: {
       position: "center center",
-      size: "100vh"
+      size: "100vh",
     },
     sm: {
       position: "50% 40%",
-      size: "160vw"
+      size: "160vw",
     },
     xl: {
       position: "50% 45%",
-      size: "150vw"
-    }
-  }
+      size: "150vw",
+    },
+  },
 };
 
 function getMaskValue(style, size) {
@@ -126,8 +126,8 @@ export default function Home() {
         trigger: node,
         start: "top 1px",
         end: "bottom 100%",
-        scrub: true
-      }
+        scrub: true,
+      },
     });
 
     // timeline: background
@@ -137,7 +137,7 @@ export default function Home() {
           `#bg-${index}`,
           {
             autoAlpha: 1,
-            duration: 0.1
+            duration: 0.1,
           },
           index - 0.1
         );
@@ -150,7 +150,7 @@ export default function Home() {
           `#bg-${index}`,
           {
             autoAlpha: 1,
-            duration: 0.25
+            duration: 0.25,
           },
           index - 0.9
         );
@@ -161,7 +161,7 @@ export default function Home() {
           `#bg-${index}`,
           {
             autoAlpha: 0,
-            duration: 0.1
+            duration: 0.1,
           },
           index + 0.9
         );
@@ -178,7 +178,11 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC&display=swap"
           rel="stylesheet"
         />
-        <title>無家十年</title>
+        <title>無家十年 - Homeless 10 Years</title>
+        <meta
+          name="description"
+          content="芒草心成立十週年專題-臺灣無家議題十年回顧"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -551,7 +555,7 @@ export default function Home() {
                 <br />
                 <b>專題支持</b>／芒草心慈善協會、卓越新聞獎基金會
                 <br />
-                <b>研究支援</b>/芒草心慈善協會、李佳庭、廖冠樺、曾文勤
+                <b>研究支援</b>／芒草心慈善協會、李佳庭、廖冠樺、陳怡安、曾文勤
                 <br />
                 <b>視覺設計</b>／張文韋
                 <br />
