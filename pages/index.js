@@ -183,6 +183,10 @@ export default function Home() {
           name="description"
           content="芒草心成立十週年專題-臺灣無家議題十年回顧"
         />
+        <meta
+          property="og:image"
+          content="https://raw.githubusercontent.com/homelesstw/homelesstw.github.io/df7b305705332b8cad5a211060926c15bd28e24a/public/og.jpg"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
