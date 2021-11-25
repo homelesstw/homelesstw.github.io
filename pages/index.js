@@ -286,8 +286,8 @@ export default function Home() {
             <div className="w-100 grid grid-cols-3 ">
               <div className="hidden md:block col-span-2"></div>
               <div className="col-span-3 md:col-span-1 flex flex-col items-end justify-center">
-                <div className="h-auto my-4 mt-32 md:mt-4 p-8 bg-white ">
-                  <p className="font-bold text-lg text-right">
+                <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white ">
+                  <p className="font-bold text-lg text-left md:text-right">
                     如果城市是所有人的城市
                     <br />
                     「市容」當然也應該包括「所有人」
@@ -306,7 +306,7 @@ export default function Home() {
             <div className="w-100 grid grid-cols-1 lg:grid-cols-2 ">
               <div />
               <div className="flex flex-col items-end justify-center">
-                <p className="h-auto my-2 md:my-4 p-6 text-lg md:text-2xl bg-white text-right font-serif leading-relaxed">
+                <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white text-left md:text-right font-serif leading-relaxed">
                   「大家都想把人趕走，卻沒人回答得出他們能去哪？」
                   <br />
                   「如果街頭已經飽和，收容中心為什麼總是住不滿？」
@@ -345,7 +345,7 @@ export default function Home() {
 
             <div className="w-100 grid grid-cols-3 ">
               <div className="col-span-3 md:col-span-1 flex flex-col  items-end justify-center">
-                <div className="h-auto my-4 mt-32 md:mt-4 p-8 bg-white">
+                <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white">
                   <p className="font-bold text-lg">
                     無家者的面貌開始轉變
                     <br />
@@ -369,7 +369,7 @@ export default function Home() {
             </div>
             <div className="w-100 grid grid-cols-1 lg:grid-cols-2 ">
               <div className="flex flex-col items-start justify-center">
-                <p className="h-auto my-2 md:my-4  p-6 text-lg md:text-2xl bg-white font-serif leading-relaxed">
+                <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white font-serif leading-relaxed">
                   「每年花 500、600 萬的醫療費在街友身上，值得嗎？」
                   <br />
                   「很多街友都想工作，但他們能做什麼？」
@@ -402,7 +402,7 @@ export default function Home() {
               <div className="hidden md:block col-span-2"></div>
             </div>
             <div className="w-100 grid grid-cols-12 items-end mt-32 md:mt-4 ">
-              <div className="col-span-12 md:col-span-5 h-auto my-4 p-8 bg-white">
+              <div className="col-span-12 md:col-span-5 h-auto my-4 p-4 md:p-8  bg-white">
                 <p className="font-bold text-lg">
                   就算租到了房子
                   <br />
@@ -419,7 +419,7 @@ export default function Home() {
               </div>
               <div />
               <div className="col-span-12 md:col-span-6 flex flex-col items-end justify-center">
-                <p className="h-auto my-2 md:my-4 p-6 text-2xl bg-white  font-serif leading-relaxed">
+                <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl  bg-white  font-serif leading-relaxed">
                   「長期蝸居在違法爛房裡的人，是租客還是無家者？」
                   <br />
                   「媒合拉近房東和街友的人 叫做社工，一個社工能拉幾戶？」
@@ -452,7 +452,7 @@ export default function Home() {
             </div>
             <div className="w-100 grid grid-cols-12 items-end mt-32 md:mt-4 ">
               <div className="col-span-12 md:col-span-6 flex flex-col items-start justify-center">
-                <p className="h-auto my-2 md:my-4 p-6 text-2xl bg-white  font-serif leading-relaxed">
+                <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl  bg-white  font-serif leading-relaxed">
                   「其他社工無計可施的全轉到我手上，我又還能做什麼？」
                   <br />
                   「欠房租的老人家跑去睡麥當勞，他到底是老福個案還是遊民？」
@@ -462,7 +462,7 @@ export default function Home() {
                 </p>
               </div>
               <div />
-              <div className="col-span-12 md:col-span-5 h-auto my-4 p-8 bg-white">
+              <div className="col-span-12 md:col-span-5 h-auto my-4 p-4 md:p-8  bg-white">
                 <p className="font-bold text-lg">
                   社福單位不應該變成遊民製造機
                 </p>
@@ -508,7 +508,7 @@ export default function Home() {
             <div className="w-100 grid grid-cols-3 ">
               <div className="hidden md:block col-span-2"></div>
               <div className="col-span-3 md:col-span-1 flex flex-col items-end justify-center">
-                <div className="h-auto my-4 mt-32 md:mt-4  p-8 bg-white ">
+                <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white ">
                   <p className="font-bold text-lg text-right">
                     如果城市是所有人的城市
                     <br />
@@ -531,7 +531,7 @@ export default function Home() {
             <div className="w-100 grid grid-cols-1 md:grid-cols-2 ">
               <div />
               <div className="flex flex-col items-end justify-center">
-                <p className="h-auto my-2 md:my-4 p-6 text-lg md:text-2xl bg-white text-right font-serif leading-relaxed">
+                <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white text-right font-serif leading-relaxed">
                   「精神障礙雖然常是人掉落街頭的原因，但也更可能是結果。」
                   <br />
                   「惡劣的生存環境和叢林法則，常以最快的速度毀人心智。」
