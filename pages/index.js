@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Head from "next/head";
@@ -229,12 +230,14 @@ export default function Home() {
             <div className="hidden md:block md:col-span-2"></div>
             <div className="col-span-3 md:col-span-1 flex flex-col min-h-screen">
               <div className="flex-grow flex flex-col items-start md:items-end justify-start md:justify-center">
-                <p className="my-3 bg-white font-bold  px-6 py-4 text-6xl">
-                  無家十年
-                </p>
-                <p className="font-serif px-6 py-4 text-2xl bg-white">
-                  人球、傷病、露宿，與夾縫中的照顧網
-                </p>
+                <Fade bottom>
+                  <p className="my-3 bg-white font-bold  px-6 py-4 text-6xl">
+                    無家十年
+                  </p>
+                  <p className="font-serif px-6 py-4 text-2xl bg-white">
+                    人球、傷病、露宿，與夾縫中的照顧網
+                  </p>
+                </Fade>
               </div>
               <div className="flex flex-col items-end">
                 <p className="font-bold text-lg bg-white px-6 py-4">
@@ -282,40 +285,43 @@ export default function Home() {
               </div>
               <div className="hidden md:block col-span-2"></div>
             </div>
-
-            <div className="w-100 grid grid-cols-3 ">
-              <div className="hidden md:block col-span-2"></div>
-              <div className="col-span-3 md:col-span-1 flex flex-col items-end justify-center">
-                <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white ">
-                  <p className="font-bold text-lg text-left md:text-right">
-                    如果城市是所有人的城市
-                    <br />
-                    「市容」當然也應該包括「所有人」
-                  </p>
-                  <div className="text-sm mt-4">
-                    <p className="my-3 leading-normal">
-                      2011年，以收容安置為名的街頭「強制驅離」走入歷史，法令的轉向與北臺灣民間力量快速竄升，使得無數流浪的生命跟著轉向，奪回就地安身的尊嚴與權利。
+            <Fade bottom>
+              <div className="w-100 grid grid-cols-3 ">
+                <div className="hidden md:block col-span-2"></div>
+                <div className="col-span-3 md:col-span-1 flex flex-col items-end justify-center">
+                  <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white ">
+                    <p className="font-bold text-lg text-left md:text-right">
+                      如果城市是所有人的城市
+                      <br />
+                      「市容」當然也應該包括「所有人」
                     </p>
-                    <p className="my-3 leading-normal">
-                      人被好好的留下，反而因此改變了街頭的樣貌。「遊民」從原本遭排擠的特定「族群」，逐漸被視為無家之人在跨階層、跨縣市間流動的一種「狀態」，汙名開始緩慢剝落……
-                    </p>
+                    <div className="text-sm mt-4">
+                      <p className="my-3 leading-normal">
+                        2011年，以收容安置為名的街頭「強制驅離」走入歷史，法令的轉向與北臺灣民間力量快速竄升，使得無數流浪的生命跟著轉向，奪回就地安身的尊嚴與權利。
+                      </p>
+                      <p className="my-3 leading-normal">
+                        人被好好的留下，反而因此改變了街頭的樣貌。「遊民」從原本遭排擠的特定「族群」，逐漸被視為無家之人在跨階層、跨縣市間流動的一種「狀態」，汙名開始緩慢剝落……
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-100 grid grid-cols-1 lg:grid-cols-2 ">
-              <div />
-              <div className="flex flex-col items-end justify-center">
-                <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white text-left md:text-right font-serif leading-relaxed">
-                  「大家都想把人趕走，卻沒人回答得出他們能去哪？」
-                  <br />
-                  「如果街頭已經飽和，收容中心為什麼總是住不滿？」
-                  <br />
-                  「就地安身究竟是失敗的安置，還是成功的輔導？」
-                  <br />
-                </p>
+            </Fade>
+            <Fade bottom>
+              <div className="w-100 grid grid-cols-1 lg:grid-cols-2 ">
+                <div />
+                <div className="flex flex-col items-end justify-center">
+                  <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white text-left md:text-right font-serif leading-relaxed">
+                    「大家都想把人趕走，卻沒人回答得出他們能去哪？」
+                    <br />
+                    「如果街頭已經飽和，收容中心為什麼總是住不滿？」
+                    <br />
+                    「就地安身究竟是失敗的安置，還是成功的輔導？」
+                    <br />
+                  </p>
+                </div>
               </div>
-            </div>
+            </Fade>
           </section>
 
           {/* 第二篇 */}
@@ -342,44 +348,48 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            <div className="w-100 grid grid-cols-3 ">
-              <div className="col-span-3 md:col-span-1 flex flex-col  items-end justify-center">
-                <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white">
-                  <p className="font-bold text-lg">
-                    無家者的面貌開始轉變
-                    <br />
-                    早就不符合過去的刻板印象
-                  </p>
-                  <div className="text-sm mt-4">
-                    <p className="my-3 leading-normal">
-                      2015
-                      年，新任臺北市長柯文哲大動作整頓街友業務、芒草心剛剛開展 3
-                      個住宿式據點，「人生百味」、「夢想城鄉」、「慕哲人社」等團體延續太陽花運動的野火，陸續誕生。
+            <Fade bottom>
+              <div className="w-100 grid grid-cols-3 ">
+                <div className="col-span-3 md:col-span-1 flex flex-col  items-end justify-center">
+                  <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white">
+                    <p className="font-bold text-lg">
+                      無家者的面貌開始轉變
+                      <br />
+                      早就不符合過去的刻板印象
                     </p>
-                    <p className="my-3 leading-normal">
-                      民間力量的堀起，讓萬華原本的網絡日漸深化。然而，也是在這一年，投身街友服務
-                      12
-                      年的社工張獻忠心灰意冷求去。無巧不巧，隔壁的新北市也風聲鶴唳……
-                    </p>
+                    <div className="text-sm mt-4">
+                      <p className="my-3 leading-normal">
+                        2015
+                        年，新任臺北市長柯文哲大動作整頓街友業務、芒草心剛剛開展
+                        3
+                        個住宿式據點，「人生百味」、「夢想城鄉」、「慕哲人社」等團體延續太陽花運動的野火，陸續誕生。
+                      </p>
+                      <p className="my-3 leading-normal">
+                        民間力量的堀起，讓萬華原本的網絡日漸深化。然而，也是在這一年，投身街友服務
+                        12
+                        年的社工張獻忠心灰意冷求去。無巧不巧，隔壁的新北市也風聲鶴唳……
+                      </p>
+                    </div>
                   </div>
                 </div>
+                <div className="hidden md:block col-span-2"></div>
               </div>
-              <div className="hidden md:block col-span-2"></div>
-            </div>
-            <div className="w-100 grid grid-cols-1 lg:grid-cols-2 ">
-              <div className="flex flex-col items-start justify-center">
-                <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white font-serif leading-relaxed">
-                  「每年花 500、600 萬的醫療費在街友身上，值得嗎？」
-                  <br />
-                  「很多街友都想工作，但他們能做什麼？」
-                  <br />
-                  「精障女性的比例為什麼高達 6 成？街頭的瘋人何去何從？」
-                  <br />
-                </p>
+            </Fade>
+            <Fade bottom>
+              <div className="w-100 grid grid-cols-1 lg:grid-cols-2 ">
+                <div className="flex flex-col items-start justify-center">
+                  <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white font-serif leading-relaxed">
+                    「每年花 500、600 萬的醫療費在街友身上，值得嗎？」
+                    <br />
+                    「很多街友都想工作，但他們能做什麼？」
+                    <br />
+                    「精障女性的比例為什麼高達 6 成？街頭的瘋人何去何從？」
+                    <br />
+                  </p>
+                </div>
+                <div />
               </div>
-              <div />
-            </div>
+            </Fade>
           </section>
 
           {/* 第三篇 */}
@@ -401,34 +411,36 @@ export default function Home() {
               </div>
               <div className="hidden md:block col-span-2"></div>
             </div>
-            <div className="w-100 grid grid-cols-12 items-end mt-32 md:mt-4 ">
-              <div className="col-span-12 md:col-span-5 h-auto my-4 p-4 md:p-8  bg-white">
-                <p className="font-bold text-lg">
-                  就算租到了房子
-                  <br />
-                  人也不一定能好好生活
-                </p>
-                <div className="text-sm mt-4">
-                  <p className="my-3 leading-normal">
-                    無家之人，並不是有地方住就得到萬靈丹。人際斷裂、精神失序、大小便失襟、室友間衝突……以前在街頭，也不用煩惱瓦斯、水電、管線等生活挑戰。
+            <Fade bottom>
+              <div className="w-100 grid grid-cols-12 items-end mt-32 md:mt-4 ">
+                <div className="col-span-12 md:col-span-5 h-auto my-4 p-4 md:p-8  bg-white">
+                  <p className="font-bold text-lg">
+                    就算租到了房子
+                    <br />
+                    人也不一定能好好生活
                   </p>
-                  <p className="my-3 leading-normal">
-                    居住很難，更難的是穩定。社工的角色一抽掉，總是前功盡棄，友善的房東也越來越少。如果說人們常對遊民存在刻板印象，那我們對所謂「自立」的樣貌，是否也帶著過時的想像？
+                  <div className="text-sm mt-4">
+                    <p className="my-3 leading-normal">
+                      無家之人，並不是有地方住就得到萬靈丹。人際斷裂、精神失序、大小便失襟、室友間衝突……以前在街頭，也不用煩惱瓦斯、水電、管線等生活挑戰。
+                    </p>
+                    <p className="my-3 leading-normal">
+                      居住很難，更難的是穩定。社工的角色一抽掉，總是前功盡棄，友善的房東也越來越少。如果說人們常對遊民存在刻板印象，那我們對所謂「自立」的樣貌，是否也帶著過時的想像？
+                    </p>
+                  </div>
+                </div>
+                <div />
+                <div className="col-span-12 md:col-span-6 flex flex-col items-end justify-center">
+                  <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl  bg-white  font-serif leading-relaxed">
+                    「長期蝸居在違法爛房裡的人，是租客還是無家者？」
+                    <br />
+                    「媒合拉近房東和街友的人 叫做社工，一個社工能拉幾戶？」
+                    <br />
+                    「為什麼這些人都租到房子了，還需要社工去關心？」
+                    <br />
                   </p>
                 </div>
               </div>
-              <div />
-              <div className="col-span-12 md:col-span-6 flex flex-col items-end justify-center">
-                <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl  bg-white  font-serif leading-relaxed">
-                  「長期蝸居在違法爛房裡的人，是租客還是無家者？」
-                  <br />
-                  「媒合拉近房東和街友的人 叫做社工，一個社工能拉幾戶？」
-                  <br />
-                  「為什麼這些人都租到房子了，還需要社工去關心？」
-                  <br />
-                </p>
-              </div>
-            </div>
+            </Fade>
           </section>
 
           {/* 第四篇 */}
@@ -450,34 +462,36 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-100 grid grid-cols-12 items-end mt-32 md:mt-4 ">
-              <div className="col-span-12 md:col-span-6 flex flex-col items-start justify-center">
-                <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl  bg-white  font-serif leading-relaxed">
-                  「其他社工無計可施的全轉到我手上，我又還能做什麼？」
-                  <br />
-                  「欠房租的老人家跑去睡麥當勞，他到底是老福個案還是遊民？」
-                  <br />
-                  「機構住進去竟然出不來，一日遊民，終身遊民？」
-                  <br />
-                </p>
-              </div>
-              <div />
-              <div className="col-span-12 md:col-span-5 h-auto my-4 p-4 md:p-8  bg-white">
-                <p className="font-bold text-lg">
-                  社福單位不應該變成遊民製造機
-                </p>
-                <div className="text-sm mt-4">
-                  <p className="my-3 leading-normal">
-                    10
-                    年來，全臺無家服務持續進展，街頭的人數卻「從未減少」。今天消失了
-                    100 個，明天又來了 100 個，城市永遠處在飽和狀態。{" "}
-                  </p>
-                  <p className="my-3 leading-normal">
-                    源頭的水從未成功防堵，再加上被漏接的家暴受害者／失業勞工／精神障礙／中高齡老弱，以及各局處、各縣市、各中心的彼此消耗，接不住的人一再從夾縫中掉落，在系統間流浪，成了官僚中的人球。{" "}
+            <Fade bottom>
+              <div className="w-100 grid grid-cols-12 items-end mt-32 md:mt-4 ">
+                <div className="col-span-12 md:col-span-6 flex flex-col items-start justify-center">
+                  <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl  bg-white  font-serif leading-relaxed">
+                    「其他社工無計可施的全轉到我手上，我又還能做什麼？」
+                    <br />
+                    「欠房租的老人家跑去睡麥當勞，他到底是老福個案還是遊民？」
+                    <br />
+                    「機構住進去竟然出不來，一日遊民，終身遊民？」
+                    <br />
                   </p>
                 </div>
+                <div />
+                <div className="col-span-12 md:col-span-5 h-auto my-4 p-4 md:p-8  bg-white">
+                  <p className="font-bold text-lg">
+                    社福單位不應該變成遊民製造機
+                  </p>
+                  <div className="text-sm mt-4">
+                    <p className="my-3 leading-normal">
+                      10
+                      年來，全臺無家服務持續進展，街頭的人數卻「從未減少」。今天消失了
+                      100 個，明天又來了 100 個，城市永遠處在飽和狀態。{" "}
+                    </p>
+                    <p className="my-3 leading-normal">
+                      源頭的水從未成功防堵，再加上被漏接的家暴受害者／失業勞工／精神障礙／中高齡老弱，以及各局處、各縣市、各中心的彼此消耗，接不住的人一再從夾縫中掉落，在系統間流浪，成了官僚中的人球。{" "}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </Fade>
           </section>
 
           {/* 第五篇 */}
@@ -504,43 +518,46 @@ export default function Home() {
               </div>
               <div className="hidden md:block col-span-2"></div>
             </div>
-
-            <div className="w-100 grid grid-cols-3 ">
-              <div className="hidden md:block col-span-2"></div>
-              <div className="col-span-3 md:col-span-1 flex flex-col items-end justify-center">
-                <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white ">
-                  <p className="font-bold text-lg text-right">
-                    如果城市是所有人的城市
-                    <br />
-                    「市容」當然也應該包括「所有人」
-                  </p>
-                  <div className="text-sm mt-4">
-                    <p className="my-3 leading-normal">
-                      長達 17
-                      年，撒瑪黎雅都是全臺唯一的女性街友安置中心，每年來來去去大約
-                      30 人，其中有高達 7、8 成都有精神議題。
+            <Fade bottom>
+              <div className="w-100 grid grid-cols-3 ">
+                <div className="hidden md:block col-span-2"></div>
+                <div className="col-span-3 md:col-span-1 flex flex-col items-end justify-center">
+                  <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white ">
+                    <p className="font-bold text-lg text-right">
+                      如果城市是所有人的城市
+                      <br />
+                      「市容」當然也應該包括「所有人」
                     </p>
-                    <p className="my-3 leading-normal">
-                      直到 2015
-                      年，撒瑪黎雅才在四處尋覓辛苦募款後，買下自己的安置據點，不用再被房東趕來趕去。「我們照顧流浪的人，但我們自己都在流浪。」新的據點悄悄在社區巷弄裡開了不顯眼的門，招牌也不敢掛得太張揚，就怕成為嫌惡設施。
-                    </p>
+                    <div className="text-sm mt-4">
+                      <p className="my-3 leading-normal">
+                        長達 17
+                        年，撒瑪黎雅都是全臺唯一的女性街友安置中心，每年來來去去大約
+                        30 人，其中有高達 7、8 成都有精神議題。
+                      </p>
+                      <p className="my-3 leading-normal">
+                        直到 2015
+                        年，撒瑪黎雅才在四處尋覓辛苦募款後，買下自己的安置據點，不用再被房東趕來趕去。「我們照顧流浪的人，但我們自己都在流浪。」新的據點悄悄在社區巷弄裡開了不顯眼的門，招牌也不敢掛得太張揚，就怕成為嫌惡設施。
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-100 grid grid-cols-1 md:grid-cols-2 ">
-              <div />
-              <div className="flex flex-col items-end justify-center">
-                <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white text-right font-serif leading-relaxed">
-                  「精神障礙雖然常是人掉落街頭的原因，但也更可能是結果。」
-                  <br />
-                  「惡劣的生存環境和叢林法則，常以最快的速度毀人心智。」
-                  <br />
-                  「特別對女性來說，在流浪剛開始即早介入，是非常關鍵的事。」
-                  <br />
-                </p>
+            </Fade>
+            <Fade bottom>
+              <div className="w-100 grid grid-cols-1 md:grid-cols-2 ">
+                <div />
+                <div className="flex flex-col items-end justify-center">
+                  <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white text-right font-serif leading-relaxed">
+                    「精神障礙雖然常是人掉落街頭的原因，但也更可能是結果。」
+                    <br />
+                    「惡劣的生存環境和叢林法則，常以最快的速度毀人心智。」
+                    <br />
+                    「特別對女性來說，在流浪剛開始即早介入，是非常關鍵的事。」
+                    <br />
+                  </p>
+                </div>
               </div>
-            </div>
+            </Fade>
           </section>
 
           {/* 最終資訊 */}
