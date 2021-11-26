@@ -218,10 +218,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div
-        ref={rootRef}
-        className="relative flex flex-col items-center justify-center min-h-screen bg-red-50"
-      >
+      <div className="relative flex flex-col items-center justify-center min-h-screen bg-red-50">
         {/* 背景 */}
         <div className="bg-div z-0">
           {bgs.map((el, index) => (
@@ -250,7 +247,10 @@ export default function Home() {
         </div>
 
         {/* 文字區 */}
-        <main className="relative z-40 inset-0 w-full min-h-screen">
+        <main
+          ref={rootRef}
+          className="relative z-40 inset-0 w-full min-h-screen"
+        >
           {/* 首段封面 */}
 
           <section className="section grid grid-cols-3 px-3 md:px-8">
@@ -586,48 +586,48 @@ export default function Home() {
               </div>
             </Fade>
           </section>
-
-          {/* 最終資訊 */}
-
-          <footer className="flex flex-col items-center bg-white p-6 pb-3 md:p-6">
-            <div className=" max-w-screen-sm p-6 my-3">
-              <h3 className="my-3 bg-white font-bold text-3xl leading-normal">
-                回首，是為了定錨下一個 10 年
-              </h3>
-
-              <p className="my-3 leading-normal">
-                這也是為什麼，我們再次為它投入心血。去年初，Right Plus
-                多多益善推出了專題「【制度傷人】臺灣限定的生存遊戲，誰破得了關？」探究臺灣底層貧窮者如何受困於我國獨有的制度困局，永無翻身之日。今年，多多與芒草心合作【無家十年】，回首
-                2011-2021，從關鍵人物到重大事件，從庇護中心、中繼住宅到多元居住，從街頭的瘋人、女性到社工，從有房的街友到無根的租客。
-              </p>
-              <p className="my-3 leading-normal">
-                回首是為了謹記，我們曾經做對了什麼，讓街頭有了巨大的轉變，讓氛圍變得友善，讓討論的空間得以撐開，多元彈性的服務百花齊放，實務經驗能夠累積交流。回首也是為了釐清，為什麼即使如此，街頭的人卻從未減少，且出了臺北市，天地如何截然不同。
-              </p>
-              <p className="my-3 leading-normal">
-                更重要的是，下一個 10
-                年，我們如何能夠面對貧窮與無家，不再束手無策。{" "}
-              </p>
-              <p className="my-3 leading-normal">
-                11 月 23 日開始，在耗時 4 個月、爬梳 13 份研究論文、訪問 21
-                位公部門與民間資深工作者、橫跨 5 個縣市與 12
-                個組織／單位後，跟著我們一起坐上時光機、走訪北中南突破臺北視角，與你一起看見臺灣底層貧窮者的掙扎、夾縫中的善意與照顧網。
-              </p>
-              <p className="my-6 leading-normal">
-                <b>採訪撰稿</b>／葉靜倫 <br />
-                <b>策題製作</b>／Right Plus 多多益善
-                <br />
-                <b>專題支持</b>／芒草心慈善協會、卓越新聞獎基金會
-                <br />
-                <b>研究支援</b>／芒草心慈善協會、李佳庭、廖冠樺、陳怡安、曾文勤
-                <br />
-                <b>視覺設計</b>／張文韋
-                <br />
-                <b>網頁設計與開發</b>／劉彥岑、許乃文
-                <br />
-              </p>
-            </div>
-          </footer>
         </main>
+
+        {/* 最終資訊 */}
+
+        <footer className="relative z-40 flex flex-col items-center bg-white p-6 pb-3 md:p-6">
+          <div className=" max-w-screen-sm p-6 my-3">
+            <h3 className="my-3 bg-white font-bold text-3xl leading-normal">
+              回首，是為了定錨下一個 10 年
+            </h3>
+
+            <p className="my-3 leading-normal">
+              這也是為什麼，我們再次為它投入心血。去年初，Right Plus
+              多多益善推出了專題「【制度傷人】臺灣限定的生存遊戲，誰破得了關？」探究臺灣底層貧窮者如何受困於我國獨有的制度困局，永無翻身之日。今年，多多與芒草心合作【無家十年】，回首
+              2011-2021，從關鍵人物到重大事件，從庇護中心、中繼住宅到多元居住，從街頭的瘋人、女性到社工，從有房的街友到無根的租客。
+            </p>
+            <p className="my-3 leading-normal">
+              回首是為了謹記，我們曾經做對了什麼，讓街頭有了巨大的轉變，讓氛圍變得友善，讓討論的空間得以撐開，多元彈性的服務百花齊放，實務經驗能夠累積交流。回首也是為了釐清，為什麼即使如此，街頭的人卻從未減少，且出了臺北市，天地如何截然不同。
+            </p>
+            <p className="my-3 leading-normal">
+              更重要的是，下一個 10
+              年，我們如何能夠面對貧窮與無家，不再束手無策。{" "}
+            </p>
+            <p className="my-3 leading-normal">
+              11 月 23 日開始，在耗時 4 個月、爬梳 13 份研究論文、訪問 21
+              位公部門與民間資深工作者、橫跨 5 個縣市與 12
+              個組織／單位後，跟著我們一起坐上時光機、走訪北中南突破臺北視角，與你一起看見臺灣底層貧窮者的掙扎、夾縫中的善意與照顧網。
+            </p>
+            <p className="my-6 leading-normal">
+              <b>採訪撰稿</b>／葉靜倫 <br />
+              <b>策題製作</b>／Right Plus 多多益善
+              <br />
+              <b>專題支持</b>／芒草心慈善協會、卓越新聞獎基金會
+              <br />
+              <b>研究支援</b>／芒草心慈善協會、李佳庭、廖冠樺、陳怡安、曾文勤
+              <br />
+              <b>視覺設計</b>／張文韋
+              <br />
+              <b>網頁設計與開發</b>／劉彥岑、許乃文
+              <br />
+            </p>
+          </div>
+        </footer>
       </div>
     </>
   );
