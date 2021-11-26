@@ -17,7 +17,7 @@
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "babel-plugin-styled-components": "^2.0.1",
-    "postcss": "^8.3.5",
+    "postcss": "^8.4.1",
     "tailwindcss": "^2.2.4"
   }
 }

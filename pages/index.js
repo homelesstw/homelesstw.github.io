@@ -22,108 +22,108 @@ const maskStyle = {
     url: `/img/bg-mask-1.svg`,
     xs: {
       position: "50% 50%",
-      size: "120vh"
+      size: "120vh",
     },
     sm: {
       position: "50% 50%",
-      size: "150vh"
+      size: "150vh",
     },
     md: {
       position: "75% 50%",
-      size: "150vw"
-    }
+      size: "150vw",
+    },
   },
   mask3: {
     url: `/img/bg-mask-3.svg`,
     xs: {
       position: "50% 100%",
-      size: "160vh"
+      size: "160vh",
     },
     sm: {
       position: "50% 100%",
-      size: "180vh"
+      size: "180vh",
     },
     md: {
       position: "65% 45%",
-      size: "160vw"
+      size: "160vw",
     },
     xl: {
       position: "75% 50%",
-      size: "140vw"
-    }
+      size: "140vw",
+    },
   },
   mask4: {
     url: `/img/bg-mask-4.svg`,
     xs: {
       position: "50% 100%",
-      size: "165vh"
+      size: "165vh",
     },
     sm: {
       position: "50% 100%",
-      size: "180vh"
+      size: "180vh",
     },
     md: {
       position: "30% 55%",
-      size: "150vw"
+      size: "150vw",
     },
     xl: {
       position: "25% 50%",
-      size: "130vw"
-    }
+      size: "130vw",
+    },
   },
   mask5: {
     url: `/img/bg-mask-5.svg`,
     xs: {
       position: "50% 100%",
-      size: "165vh"
+      size: "165vh",
     },
     sm: {
       position: "50% 100%",
-      size: "180vh"
+      size: "180vh",
     },
     md: {
       position: "50% 60%",
-      size: "140vw"
+      size: "140vw",
     },
     xl: {
       position: "50% 55%",
-      size: "130vw"
-    }
+      size: "130vw",
+    },
   },
   mask6: {
     url: `/img/bg-mask-6.svg`,
     xs: {
       position: "50% 60%",
-      size: "175vh"
+      size: "175vh",
     },
     sm: {
       position: "50% 100%",
-      size: "180vh"
+      size: "180vh",
     },
     md: {
       position: "50% 50%",
-      size: "140vw"
-    }
+      size: "140vw",
+    },
   },
   mask7: {
     url: `/img/bg-mask-7.svg`,
     xs: {
       position: "50% 50%",
-      size: "175vh"
+      size: "175vh",
     },
     sm: {
       position: "50% 100%",
-      size: "190vh"
+      size: "190vh",
     },
     md: {
       position: "50% 30%",
-      size: "160vw"
+      size: "160vw",
     },
     xl: {
       position: "50% 45%",
-      size: "150vw"
-    }
-  }
+      size: "150vw",
+    },
+  },
 };
 
 function getMaskValue(style, size) {
@@ -154,8 +154,8 @@ export default function Home() {
         trigger: node,
         start: "top 1px",
         end: "bottom 100%",
-        scrub: true
-      }
+        scrub: true,
+      },
     });
 
     // timeline: background
@@ -165,7 +165,7 @@ export default function Home() {
           `#bg-${index}`,
           {
             autoAlpha: 1,
-            duration: 0.1
+            duration: 0.1,
           },
           index - 0.1
         );
@@ -178,7 +178,7 @@ export default function Home() {
           `#bg-${index}`,
           {
             autoAlpha: 1,
-            duration: 0.25
+            duration: 0.25,
           },
           index - 0.9
         );
@@ -189,7 +189,7 @@ export default function Home() {
           `#bg-${index}`,
           {
             autoAlpha: 0,
-            duration: 0.1
+            duration: 0.1,
           },
           index + 0.9
         );
@@ -258,10 +258,10 @@ export default function Home() {
             <div className="col-span-3 md:col-span-1 flex flex-col min-h-screen">
               <div className="flex-grow flex flex-col items-start md:items-end justify-start md:justify-center">
                 <Fade bottom>
-                  <p className="my-3 bg-white font-bold  px-6 py-4 text-6xl">
+                  <p className="my-3 bg-white font-bold  px-6 py-4 text-4xl md:text-6xl">
                     無家十年
                   </p>
-                  <p className="font-serif px-6 py-4 text-2xl bg-white">
+                  <p className="font-serif px-6 py-4 text-xl md:text-2xl bg-white">
                     人球、傷病、露宿，與夾縫中的照顧網
                   </p>
                 </Fade>
