@@ -36,7 +36,7 @@ const maskStyle = {
   mask3: {
     url: `/img/bg-mask-3.svg`,
     xs: {
-      position: "50% 100%",
+      position: "50% 50%",
       size: "160vh",
     },
     sm: {
@@ -55,7 +55,7 @@ const maskStyle = {
   mask4: {
     url: `/img/bg-mask-4.svg`,
     xs: {
-      position: "50% 100%",
+      position: "50% 50%",
       size: "165vh",
     },
     sm: {
@@ -74,7 +74,7 @@ const maskStyle = {
   mask5: {
     url: `/img/bg-mask-5.svg`,
     xs: {
-      position: "50% 100%",
+      position: "50% 50%",
       size: "165vh",
     },
     sm: {
@@ -108,7 +108,7 @@ const maskStyle = {
   mask7: {
     url: `/img/bg-mask-7.svg`,
     xs: {
-      position: "50% 50%",
+      position: "50% 60%",
       size: "175vh",
     },
     sm: {
@@ -252,71 +252,74 @@ export default function Home() {
           className="relative z-40 inset-0 w-full min-h-screen"
         >
           {/* 首段封面 */}
-
-          <section className="section grid grid-cols-3 px-3 md:px-8">
-            <div className="hidden md:block md:col-span-2"></div>
-            <div className="col-span-3 md:col-span-1 flex flex-col min-h-screen">
-              <div className="flex-grow flex flex-col items-start md:items-end justify-start md:justify-center">
-                <Fade bottom>
-                  <p className="my-3 bg-white font-bold  px-6 py-4 text-4xl md:text-6xl">
+          <Fade right>
+            <section className="section grid grid-cols-3 px-3 md:px-8">
+              <div className="hidden md:block md:col-span-2"></div>
+              <div className="col-span-3 md:col-span-1 flex flex-col min-h-screen">
+                <div className="lg:h-1/2 flex flex-col items-start md:items-end justify-start md:justify-center lg:my-8">
+                  <p className="my-8 lg:my-3 bg-white font-bold  px-6 py-4 text-4xl md:text-6xl shadow-lg">
                     無家十年
                   </p>
-                  <p className="font-serif px-6 py-4 text-xl md:text-2xl bg-white">
+                  <p className="font-serif px-6 py-4 text-xl md:text-2xl bg-white shadow-lg">
                     人球、傷病、露宿，與夾縫中的照顧網
                   </p>
-                </Fade>
+                </div>
+                <div className="lg:flex-grow flex flex-col lg:justify-center lg:items-end lg:mt-0 mt-4 w-2/3 lg:w-full">
+                  <p className="font-bold text-md lg:text-lg bg-white px-6 py-2 shadow-lg">
+                    芒草心 10 週年 x 臺灣無家流浪 10 年回顧
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col items-end">
-                <p className="font-bold text-lg bg-white px-6 py-4">
-                  芒草心 10 週年 x 臺灣無家流浪 10 年回顧
-                </p>
-              </div>
-            </div>
-          </section>
+            </section>
+          </Fade>
 
           {/* 導言 */}
-          <section className="section flex flex-col px-3 md:px-8 items-center justify-center ">
-            <div className=" max-w-screen-sm bg-white px-6 py-4 my-3">
-              <p className="my-3 leading-normal">
-                2011 年，是臺灣無家服務領域風起雲湧的開端。10
-                年來，僅管公部門法令文書依舊以「遊民」相稱，但民間團體早已跟隨國際腳步，從早年的「流浪漢」、「遊民」，到近年提倡街頭友善的「街友」一詞，一路拓寬倡議邊界，看見更多蝸居在違法爛房、寄宿營業場所、常態性依親的「無家者」。
-              </p>
-              <p className="my-3 leading-normal">
-                2021年，芒草心與多多益善合作【無家十年】，回首
-                2011-2021，從關鍵人物到重大事件，從庇護中心、中繼住宅到多元居住，從街頭的瘋人、女性到社工，從有房的街友到無根的租客。
-              </p>
-            </div>
-          </section>
+          <Fade bottom>
+            <section className="section flex flex-col px-3 md:px-8 items-center justify-center ">
+              <div className=" max-w-screen-sm bg-white px-6 py-4 lg:px-12 lg:py-10 my-3 shadow-lg">
+                <p className="my-3 leading-normal">
+                  2011 年，是臺灣無家服務領域風起雲湧的開端。10
+                  年來，僅管公部門法令文書依舊以「遊民」相稱，但民間團體早已跟隨國際腳步，從早年的「流浪漢」、「遊民」，到近年提倡街頭友善的「街友」一詞，一路拓寬倡議邊界，看見更多蝸居在違法爛房、寄宿營業場所、常態性依親的「無家者」。
+                </p>
+                <p className="my-3 leading-normal">
+                  2021年，芒草心與多多益善合作【無家十年】，回首
+                  2011-2021，從關鍵人物到重大事件，從庇護中心、中繼住宅到多元居住，從街頭的瘋人、女性到社工，從有房的街友到無根的租客。
+                </p>
+              </div>
+            </section>
+          </Fade>
 
           {/* 第一篇 */}
 
-          <section className="section p-3 md:p-8 flex flex-col">
-            <div className="w-100 grid grid-cols-3 flex-grow">
-              <div className="col-span-3 lg:col-span-1 flex flex-col">
-                <div className="flex flex-col items-start justify-center">
-                  <p className="bg-white my-2 px-4 py-3 text-lg">
-                    無家十年 2011-2014
-                  </p>
-                  <p className="font-bold my-2 px-4 py-3 text-2xl bg-white">
-                    誰的市容，誰的家？
-                  </p>
-                  <a
-                    href="https://rightplus.org/2021/11/17/homeless-ten-years-1/"
-                    target="_blank"
-                  >
-                    <button className=" my-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                      閱讀專題文章
-                    </button>
-                  </a>
+          <section className="section p-3 md:p-8 flex flex-col justify-end">
+            <Fade left>
+              <div className="w-100 grid grid-cols-3 lg:flex-grow">
+                <div className="col-span-3 lg:col-span-1 flex flex-col">
+                  <div className="flex flex-col items-start justify-center">
+                    <p className="bg-white my-2 px-4 py-3 text-lg shadow-lg">
+                      無家十年 2011-2014
+                    </p>
+                    <p className="font-bold my-2 px-4 py-3 text-2xl lg:text-3xl bg-white shadow-lg">
+                      誰的市容，誰的家？
+                    </p>
+                    <a
+                      href="https://rightplus.org/2021/11/17/homeless-ten-years-1/"
+                      target="_blank"
+                    >
+                      <button className=" my-2 bg-primary hover:bg-secondary hover:text-black text-white font-bold py-2 px-4 rounded shadow-lg">
+                        閱讀專題文章
+                      </button>
+                    </a>
+                  </div>
                 </div>
+                <div className="hidden md:block col-span-2"></div>
               </div>
-              <div className="hidden md:block col-span-2"></div>
-            </div>
-            <Fade bottom>
+            </Fade>
+            <Fade left>
               <div className="w-100 grid grid-cols-3 ">
                 <div className="hidden md:block col-span-2"></div>
                 <div className="col-span-3 md:col-span-1 flex flex-col items-end justify-center">
-                  <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white ">
+                  <div className="h-auto my-4 mt-4 p-4 md:p-8 bg-gray-100 shadow-lg">
                     <p className="font-bold text-lg text-left md:text-right">
                       如果城市是所有人的城市
                       <br />
@@ -333,12 +336,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </Fade>
-            <Fade bottom>
               <div className="w-100 grid grid-cols-1 lg:grid-cols-2 ">
                 <div />
-                <div className="flex flex-col items-end justify-center">
-                  <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white text-left md:text-right font-serif leading-relaxed">
+                <div className="flex flex-col lg:items-end justify-center">
+                  <p className="h-auto p-4 md:p-6 text-lg md:text-2xl bg-gray-100 shadow-lg text-left md:text-right font-serif leading-relaxed">
                     「大家都想把人趕走，卻沒人回答得出他們能去哪？」
                     <br />
                     「如果街頭已經飽和，收容中心為什麼總是住不滿？」
@@ -353,32 +354,34 @@ export default function Home() {
 
           {/* 第二篇 */}
 
-          <section className="section p-3 md:p-8 flex flex-col">
-            <div className="w-100 grid grid-cols-3 flex-grow ">
-              <div className="hidden md:block col-span-2"></div>
-              <div className="col-span-3 lg:col-span-1 flex flex-col">
-                <div className="flex flex-col items-end justify-center">
-                  <p className="bg-white  my-2 px-4 py-3  text-lg">
-                    無家十年 2015-2018
-                  </p>
-                  <p className="font-bold h-16 my-2 px-4 py-3  text-2xl bg-white">
-                    街頭的瘋人，與想像中的遊民
-                  </p>
-                  <a
-                    href="https://rightplus.org/2021/11/18/homeless-ten-years-2/"
-                    target="_blank"
-                  >
-                    <button className="my-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                      閱讀專題文章
-                    </button>
-                  </a>
+          <section className="section p-3 md:p-8 flex flex-col justify-end">
+            <Fade right>
+              <div className="w-100 grid grid-cols-3 lg:flex-grow ">
+                <div className="hidden md:block col-span-2"></div>
+                <div className="col-span-3 lg:col-span-1 flex flex-col">
+                  <div className="flex flex-col items-end justify-center">
+                    <p className="bg-white  my-2 px-4 py-3  text-lg shadow-lg">
+                      無家十年 2015-2018
+                    </p>
+                    <p className="font-bold h-16 my-2 px-4 py-3  text-2xl  lg:text-3xl bg-white shadow-lg">
+                      街頭的瘋人，與想像中的遊民
+                    </p>
+                    <a
+                      href="https://rightplus.org/2021/11/18/homeless-ten-years-2/"
+                      target="_blank"
+                    >
+                      <button className=" my-2 bg-primary hover:bg-secondary hover:text-black text-white font-bold py-2 px-4 rounded shadow-lg">
+                        閱讀專題文章
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <Fade bottom>
+            </Fade>
+            <Fade right>
               <div className="w-100 grid grid-cols-3 ">
                 <div className="col-span-3 md:col-span-1 flex flex-col  items-end justify-center">
-                  <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white">
+                  <div className="h-auto my-4 mt-4 p-4 md:p-8 bg-gray-100 shadow-lg">
                     <p className="font-bold text-lg">
                       無家者的面貌開始轉變
                       <br />
@@ -401,11 +404,9 @@ export default function Home() {
                 </div>
                 <div className="hidden md:block col-span-2"></div>
               </div>
-            </Fade>
-            <Fade bottom>
               <div className="w-100 grid grid-cols-1 lg:grid-cols-2 ">
                 <div className="flex flex-col items-start justify-center">
-                  <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white font-serif leading-relaxed">
+                  <p className="h-auto p-4 md:p-6 text-lg md:text-2xl bg-gray-100 shadow-lg font-serif leading-relaxed">
                     「每年花 500、600 萬的醫療費在街友身上，值得嗎？」
                     <br />
                     「很多街友都想工作，但他們能做什麼？」
@@ -418,35 +419,36 @@ export default function Home() {
               </div>
             </Fade>
           </section>
-
           {/* 第三篇 */}
 
-          <section className="section p-3 md:p-8 flex flex-col">
-            <div className="w-100 grid grid-cols-3 flex-grow">
-              <div className="col-span-3 lg:col-span-1 flex flex-col">
-                <div className="flex flex-col items-start justify-center">
-                  <p className="bg-white  my-2 px-4 py-3  text-lg">
-                    無家十年 2019-2021
-                  </p>
-                  <p className="font-bold h-16  my-2 px-4 py-3  text-2xl bg-white">
-                    有房的街友，與無根的租客
-                  </p>
-                  <a
-                    href="https://rightplus.org/2021/11/30/homeless-ten-years-3/
+          <section className="section p-3 md:p-8 flex flex-col justify-end">
+            <Fade left>
+              <div className="w-100 grid grid-cols-3 lg:flex-grow">
+                <div className="col-span-3 lg:col-span-1 flex flex-col">
+                  <div className="flex flex-col items-start justify-center">
+                    <p className="bg-white  my-2 px-4 py-3  text-lg shadow-lg">
+                      無家十年 2019-2021
+                    </p>
+                    <p className="font-bold h-16  my-2 px-4 py-3 text-2xl lg:text-3xl bg-white shadow-lg">
+                      有房的街友，與無根的租客
+                    </p>
+                    <a
+                      href="https://rightplus.org/2021/11/30/homeless-ten-years-3/
                     "
-                    target="_blank"
-                  >
-                    <button className="my-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                      閱讀專題文章
-                    </button>
-                  </a>
+                      target="_blank"
+                    >
+                      <button className=" my-2 bg-primary hover:bg-secondary hover:text-black text-white font-bold py-2 px-4 rounded shadow-lg">
+                        閱讀專題文章
+                      </button>
+                    </a>
+                  </div>
                 </div>
+                <div className="hidden md:block col-span-2"></div>
               </div>
-              <div className="hidden md:block col-span-2"></div>
-            </div>
-            <Fade bottom>
-              <div className="w-100 grid grid-cols-12 items-end mt-32 md:mt-4 ">
-                <div className="col-span-12 md:col-span-5 h-auto my-4 p-4 md:p-8  bg-white">
+            </Fade>
+            <Fade left>
+              <div className="w-100 grid grid-cols-12 items-end mt-4 ">
+                <div className="col-span-12 md:col-span-5 h-auto my-2 lg:my-4 p-4 md:p-8 bg-gray-100">
                   <p className="font-bold text-lg">
                     就算租到了房子
                     <br />
@@ -463,7 +465,7 @@ export default function Home() {
                 </div>
                 <div />
                 <div className="col-span-12 md:col-span-6 flex flex-col items-end justify-center">
-                  <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl  bg-white  font-serif leading-relaxed">
+                  <p className="h-auto md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-gray-100 shadow-lg font-serif leading-relaxed">
                     「長期蝸居在違法爛房裡的人，是租客還是無家者？」
                     <br />
                     「媒合拉近房東和街友的人 叫做社工，一個社工能拉幾戶？」
@@ -477,33 +479,34 @@ export default function Home() {
           </section>
 
           {/* 第四篇 */}
-
-          <section className="section p-3 md:p-8 flex flex-col">
-            <div className="w-100 grid grid-cols-3   flex-grow">
-              <div className="hidden md:block col-span-2"></div>
-              <div className="col-span-3 lg:col-span-1 flex flex-col">
-                <div className="flex flex-col items-end justify-center">
-                  <p className="bg-white  my-2 px-4 py-3  text-lg">
-                    無家十年 2021-
-                  </p>
-                  <p className="font-bold my-2 px-4 py-3  text-2xl bg-white">
-                    官僚中的老弱人球，與夾縫中的照顧網
-                  </p>
-                  <a
-                    href="https://rightplus.org/2021/11/30/homeless-ten-years-4/"
-                    target="_blank"
-                  >
-                    <button className="my-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                      閱讀專題文章
-                    </button>
-                  </a>
+          <section className="section p-3 md:p-8 flex flex-col justify-end">
+            <Fade right>
+              <div className="w-100 grid grid-cols-3 lg:flex-grow">
+                <div className="hidden md:block col-span-2"></div>
+                <div className="col-span-3 lg:col-span-1 flex flex-col">
+                  <div className="flex flex-col items-end justify-center">
+                    <p className="bg-white  my-2 px-4 py-3  text-lg shadow-lg">
+                      無家十年 2021-
+                    </p>
+                    <p className="font-bold my-2 px-4 py-3  text-2xl lg:text-3xl bg-white shadow-lg">
+                      官僚中的老弱人球，與夾縫中的照顧網
+                    </p>
+                    <a
+                      href="https://rightplus.org/2021/11/30/homeless-ten-years-4/"
+                      target="_blank"
+                    >
+                      <button className=" my-2 bg-primary hover:bg-secondary hover:text-black text-white font-bold py-2 px-4 rounded shadow-lg">
+                        閱讀專題文章
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <Fade bottom>
-              <div className="w-100 grid grid-cols-12 items-end mt-32 md:mt-4 ">
+            </Fade>
+            <Fade right>
+              <div className="w-100 grid grid-cols-12 items-end mt-4 ">
                 <div className="col-span-12 md:col-span-6 flex flex-col items-start justify-center">
-                  <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl  bg-white  font-serif leading-relaxed">
+                  <p className="h-auto md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-gray-100 shadow-lg  font-serif leading-relaxed">
                     「其他社工無計可施的全轉到我手上，我又還能做什麼？」
                     <br />
                     「欠房租的老人家跑去睡麥當勞，他到底是老福個案還是遊民？」
@@ -513,7 +516,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div />
-                <div className="col-span-12 md:col-span-5 h-auto my-4 p-4 md:p-8  bg-white">
+                <div className="col-span-12 md:col-span-5 h-auto my-3 lg:my-4 p-4 md:p-8 bg-gray-100 shadow-lg">
                   <p className="font-bold text-lg">
                     社福單位不應該變成遊民製造機
                   </p>
@@ -533,34 +536,35 @@ export default function Home() {
           </section>
 
           {/* 第五篇 */}
-
-          <section className="section p-3 md:p-8 flex flex-col">
-            <div className="w-100 grid grid-cols-3 flex-grow">
-              <div className="col-span-3 lg:col-span-1 flex flex-col">
-                <div className="flex flex-col items-start justify-center">
-                  <p className="bg-white my-2 px-4 py-3 text-lg">
-                    無家十年－番外篇
-                  </p>
-                  <p className="font-bold bg-white  my-2 px-4 py-3  text-2xl ">
-                    街頭的女性，與貧病交迫的廻圈／專訪撒瑪黎雅婦女關懷協會
-                  </p>
-                  <a
-                    href="https://rightplus.org/2021/11/25/homeless-ten-years-5/"
-                    target="_blank"
-                  >
-                    <button className="my-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                      閱讀專題文章
-                    </button>
-                  </a>
+          <section className="section p-3 md:p-8 flex flex-col justify-end">
+            <Fade left>
+              <div className="w-100 grid grid-cols-3 lg:flex-grow">
+                <div className="col-span-3 lg:col-span-1 flex flex-col">
+                  <div className="flex flex-col items-start justify-center">
+                    <p className="bg-white my-2 px-4 py-3 text-lg shadow-lg">
+                      無家十年－番外篇
+                    </p>
+                    <p className="font-bold bg-white my-2 px-4 py-3 text-2xl lg:text-3xl  shadow-lg">
+                      街頭的女性，與貧病交迫的廻圈／專訪撒瑪黎雅婦女關懷協會
+                    </p>
+                    <a
+                      href="https://rightplus.org/2021/11/25/homeless-ten-years-5/"
+                      target="_blank"
+                    >
+                      <button className=" my-2 bg-primary hover:bg-secondary hover:text-black text-white font-bold py-2 px-4 rounded shadow-lg">
+                        閱讀專題文章
+                      </button>
+                    </a>
+                  </div>
                 </div>
+                <div className="hidden md:block col-span-2"></div>
               </div>
-              <div className="hidden md:block col-span-2"></div>
-            </div>
-            <Fade bottom>
+            </Fade>
+            <Fade left>
               <div className="w-100 grid grid-cols-3 ">
                 <div className="hidden md:block col-span-2"></div>
                 <div className="col-span-3 md:col-span-1 flex flex-col items-end justify-center">
-                  <div className="h-auto my-4 mt-32 md:mt-4 p-4 md:p-8 bg-white ">
+                  <div className="h-auto my-4 mt-4 p-4 md:p-8 bg-gray-100 shadow-lg">
                     <p className="font-bold text-lg text-right">
                       如果城市是所有人的城市
                       <br />
@@ -580,12 +584,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </Fade>
-            <Fade bottom>
               <div className="w-100 grid grid-cols-1 md:grid-cols-2 ">
                 <div />
                 <div className="flex flex-col items-end justify-center">
-                  <p className="h-auto my-2 md:my-4 p-4 md:p-6 text-lg md:text-2xl bg-white text-right font-serif leading-relaxed">
+                  <p className="h-auto p-4 md:p-6 text-lg md:text-2xl bg-gray-100 shadow-lg text-right font-serif leading-relaxed">
                     「精神障礙雖然常是人掉落街頭的原因，但也更可能是結果。」
                     <br />
                     「惡劣的生存環境和叢林法則，常以最快的速度毀人心智。」
@@ -601,9 +603,9 @@ export default function Home() {
 
         {/* 最終資訊 */}
 
-        <footer className="relative z-40 flex flex-col items-center bg-white p-6 pb-3 md:p-6 inset-0 w-full min-h-screen">
-          <div className=" max-w-screen-sm p-6 my-3">
-            <h3 className="my-3 bg-white font-bold text-3xl leading-normal">
+        <footer className="relative z-40 flex flex-col items-center bg-white mt-32 p-6 pb-3 md:p-6 inset-0 w-full min-h-screen">
+          <div className=" max-w-screen-sm p-8 my-3">
+            <h3 className="my-6 font-bold text-3xl leading-normal">
               回首，是為了定錨下一個 10 年
             </h3>
 

@@ -1,6 +1,6 @@
 .dot {
   width: 100vw;
-  height: 100vh;
+  height: 896px;
   background-image: url("/img/bg.png");
   background-repeat: repeat;
 }
@@ -14,9 +14,14 @@
 
 .section {
   width: 100vw;
-  min-height: 100vh; /* same as dot */
+  height: 896px;
 }
 
+@media (max-width: 576px) {
+  .section {
+    height: 1024px;
+  }
+}
 .bg-div {
   position: fixed;
   top: 0;
@@ -41,19 +46,19 @@
 
 /* xs */
 .dot.dot-3 {
-  height: 120vh;
+  height: 1024px;
 }
 .dot.dot-4 {
-  height: 120vh;
+  height: 1024px;
 }
 .dot.dot-5 {
-  height: 120vh;
+  height: 1024px;
 }
 .dot.dot-6 {
-  height: 120vh;
+  height: 1024px;
 }
 .dot.dot-7 {
-  height: 130vh;
+  height: 1024px;
 }
 
 /* sm */
@@ -97,40 +102,40 @@
 /* lg */
 @media (min-width: 992px) {
   .dot.dot-3 {
-    height: 130vh;
+    height: 896px;
   }
   .dot.dot-4 {
-    height: 120vh;
+    height: 896px;
   }
   .dot.dot-5 {
-    height: 100vh;
+    height: 896px;
   }
   .dot.dot-6 {
-    height: 100vh;
+    height: 896px;
   }
   .dot.dot-7 {
-    height: 140vh;
+    height: 896px;
   }
   .dot.dot-end {
-    height: 50vh;
+    height: 896px;
   }
 }
 
 /* xl */
 @media (min-width: 1200px) {
   .dot.dot-3 {
-    height: 100vh;
+    height: 896px;
   }
   .dot.dot-4 {
-    height: 100vh;
+    height: 896px;
   }
   .dot.dot-5 {
-    height: 100vh;
+    height: 896px;
   }
   .dot.dot-6 {
-    height: 100vh;
+    height: 896px;
   }
   .dot.dot-7 {
-    height: 100vh;
+    height: 896px;
   }
 }
