@@ -431,9 +431,15 @@ export default function Home() {
                   <p className="font-bold h-16  my-2 px-4 py-3  text-2xl bg-white">
                     有房的街友，與無根的租客
                   </p>
-                  <button className="my-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                    閱讀專題文章
-                  </button>
+                  <a
+                    href="https://rightplus.org/2021/11/30/homeless-ten-years-3/
+                    "
+                    target="_blank"
+                  >
+                    <button className="my-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                      閱讀專題文章
+                    </button>
+                  </a>
                 </div>
               </div>
               <div className="hidden md:block col-span-2"></div>
@@ -483,9 +489,14 @@ export default function Home() {
                   <p className="font-bold my-2 px-4 py-3  text-2xl bg-white">
                     官僚中的老弱人球，與夾縫中的照顧網
                   </p>
-                  <button className="my-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                    閱讀專題文章
-                  </button>
+                  <a
+                    href="https://rightplus.org/2021/11/30/homeless-ten-years-4/"
+                    target="_blank"
+                  >
+                    <button className="my-2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                      閱讀專題文章
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
