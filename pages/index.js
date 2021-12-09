@@ -249,7 +249,7 @@ export default function Home() {
         {/* 文字區 */}
         <main
           ref={rootRef}
-          className="relative z-40 inset-0 w-full min-h-screen"
+          className="relative z-40 inset-0 w-full min-h-screen overflow-hidden"
         >
           {/* 首段封面 */}
           <Fade right>
