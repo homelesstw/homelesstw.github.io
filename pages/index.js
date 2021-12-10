@@ -21,8 +21,8 @@ const maskStyle = {
   mask1: {
     url: `/img/bg-mask-1.svg`,
     xs: {
-      position: "50% 50%",
-      size: "120vh",
+      position: "50% 0%",
+      size: "170vh",
     },
     sm: {
       position: "50% 50%",
@@ -120,7 +120,7 @@ const maskStyle = {
       size: "160vw",
     },
     xl: {
-      position: "50% 45%",
+      position: "70% 45%",
       size: "150vw",
     },
   },
@@ -253,19 +253,19 @@ export default function Home() {
         >
           {/* 首段封面 */}
           <Fade right>
-            <section className="section grid grid-cols-3 px-3 md:px-8">
+            <section className="section lg:grid lg:grid-cols-3 px-3 md:px-8 py-4 lg:py-0">
               <div className="hidden md:block md:col-span-2"></div>
-              <div className="col-span-3 md:col-span-1 flex flex-col min-h-screen">
-                <div className="lg:h-1/2 flex flex-col items-start md:items-end justify-start md:justify-center lg:my-8">
-                  <p className="my-8 lg:my-3 bg-white font-bold  px-6 py-4 text-4xl md:text-6xl shadow-lg">
+              <div className="md:col-span-1 lg:flex lg:flex-col h-min lg:min-h-screen bg-white lg:bg-transparent">
+                <div className="lg:h-1/2 lg:flex lg:flex-col items-start md:items-end justify-start md:justify-center lg:my-8">
+                  <p className="my-2 lg:my-8 lg:my-3 bg-white font-bold  px-6 pt-4 lg:py-4 text-4xl md:text-6xl lg:shadow-lg">
                     無家十年
                   </p>
-                  <p className="font-serif px-6 py-4 text-xl md:text-2xl bg-white shadow-lg">
+                  <p className="font-serif px-6 lg:py-4 text-xl md:text-2xl lg:bg-white lg:shadow-lg">
                     人球、傷病、露宿，與夾縫中的照顧網
                   </p>
                 </div>
-                <div className="lg:flex-grow flex flex-col lg:justify-center lg:items-end lg:mt-0 mt-4 w-2/3 lg:w-full">
-                  <p className="font-bold text-md lg:text-lg bg-white px-6 py-2 shadow-lg">
+                <div className="lg:flex-grow lg:flex lg:flex-col lg:justify-center lg:items-end lg:mt-0 mt-4 w-full">
+                  <p className="font-bold text-md lg:text-lg bg-white px-6 pb-4 lg:py-2 lg:shadow-lg">
                     芒草心 10 週年 x 臺灣無家流浪 10 年回顧
                   </p>
                 </div>
@@ -275,8 +275,8 @@ export default function Home() {
 
           {/* 導言 */}
           <Fade bottom>
-            <section className="section flex flex-col px-3 md:px-8 items-center justify-center ">
-              <div className=" max-w-screen-sm bg-white px-6 py-4 lg:px-12 lg:py-10 my-3 shadow-lg">
+            <section className="lg:section flex flex-col px-3 md:px-8 items-center lg:justify-center bg-white lg:bg-transparent ">
+              <div className=" max-w-screen-sm px-6 py-4 lg:px-12 lg:py-10 my-3 bg-white lg:shadow-lg">
                 <p className="my-3 leading-normal">
                   2011 年，是臺灣無家服務領域風起雲湧的開端。10
                   年來，僅管公部門法令文書依舊以「遊民」相稱，但民間團體早已跟隨國際腳步，從早年的「流浪漢」、「遊民」，到近年提倡街頭友善的「街友」一詞，一路拓寬倡議邊界，看見更多蝸居在違法爛房、寄宿營業場所、常態性依親的「無家者」。

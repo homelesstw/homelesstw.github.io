@@ -19,7 +19,7 @@
 
 @media (max-width: 576px) {
   .section {
-    height: 1024px;
+    height: 896px;
   }
 }
 .bg-div {
@@ -45,57 +45,60 @@
 }
 
 /* xs */
+.dot.dot-2 {
+  height: 896px;
+}
 .dot.dot-3 {
-  height: 1024px;
+  height: 896px;
 }
 .dot.dot-4 {
-  height: 1024px;
+  height: 896px;
 }
 .dot.dot-5 {
-  height: 1024px;
+  height: 896px;
 }
 .dot.dot-6 {
-  height: 1024px;
+  height: 896px;
 }
 .dot.dot-7 {
-  height: 1024px;
+  height: 896px;
 }
 
 /* sm */
 @media (min-width: 576px) {
   .dot.dot-3 {
-    height: 140vh;
+    height: 896px;
   }
   .dot.dot-4 {
-    height: 140vh;
+    height: 896px;
   }
   .dot.dot-5 {
-    height: 140vh;
+    height: 896px;
   }
   .dot.dot-6 {
-    height: 140vh;
+    height: 896px;
   }
   .dot.dot-7 {
-    height: 140vh;
+    height: 896px;
   }
 }
 
 /* md */
 @media (min-width: 768px) {
   .dot.dot-3 {
-    height: 130vh;
+    height: 896px;
   }
   .dot.dot-4 {
-    height: 120vh;
+    height: 896px;
   }
   .dot.dot-5 {
-    height: 100vh;
+    height: 896px;
   }
   .dot.dot-6 {
-    height: 100vh;
+    height: 896px;
   }
   .dot.dot-7 {
-    height: 140vh;
+    height: 896px;
   }
 }
 
@@ -123,6 +126,9 @@
 
 /* xl */
 @media (min-width: 1200px) {
+  .dot.dot-2 {
+    height: 224px;
+  }
   .dot.dot-3 {
     height: 896px;
   }
